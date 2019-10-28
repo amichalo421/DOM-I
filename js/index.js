@@ -61,9 +61,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 let ctaTexth1 = document.querySelector('.cta-text h1');
 ctaTexth1.textContent = siteContent["cta"]["h1"];
   //titletextwrap
-  let ctaContainer = document.querySelector('.cta');
-  ctaContainer.style.flexWrap = "wrap";
-  ctaContainer.justifyContent = "center";
+  // let ctaContainer = document.querySelector('.cta');
+  // ctaContainer.style.flexWrap = "wrap";
+  // ctaContainer.justifyContent = "center";
 //btn
 let ctaTextButton = document.querySelector('.cta-text button')
 ctaTextButton.textContent = siteContent["cta"]["button"];
