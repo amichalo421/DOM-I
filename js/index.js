@@ -73,29 +73,39 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 // let btnText = document.getElementsByTagName("button")[0];
 // btnText.textContent = "Get started";
 
-
-
-
+//titletext
+let ctaTexth1 = document.querySelector('.cta-text h1');
+ctaTexth1.textContent = siteContent["cta"]["h1"];
+//btn
+let ctaTextButton = document.querySelector('.cta-text button')
+ctaTextButton.textContent = siteContent["cta"]["button"];
+//img
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+headerLogo.style.width = "300px";
 
 
 //---------------------------BODY TOP---------------------------
-const featuresBody = document.getElementsByTagName('h4')[0];
-featuresBody.textContent = "Features";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+// const featuresBody = document.getElementsByTagName('h4')[0];
+// featuresBody.textContent = "Features";
+// //
+// // const featuresText = document.getElementsByTagName('p')[0];
+// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
 
-const aboutBody = document.getElementsByTagName('h4')[1];
-aboutBody.textContent = "About";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+// const aboutBody = document.getElementsByTagName('h4')[1];
+// aboutBody.textContent = "About";
+// //
+// // const featuresText = document.getElementsByTagName('p')[0];
+// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
 
-
-
-const headerLogo = document.getElementById('cta-img');
-headerLogo.setAttribute('src', siteContent['cta']['img-src']);
-headerLogo.style.width = "300px";
+let h4elements = document.getElementsByTagName('h4');
+let pElements = document.getElementsByTagName('p');
+//features
+h4elements[0].textContent = siteContent["main-content"]["features-h4"];
+pElements[0].textContent = siteContent["main-content"]["features-content"];
+//about
+h4elements[1].textContent = siteContent["main-content"]["about-h4"];
+pElements[1].textContent = siteContent["main-content"]["about-content"];
 
 
 //---------------------------BODY BOTTOM---------------------------
