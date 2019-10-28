@@ -38,5 +38,56 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//NAVIGATION//
+let services = document.getElementsByTagName('a')[0];
+services.textContent = 'Services';
+let product = document.getElementsByTagName('a')[1];
+product.textContent = 'Product';
+let vision = document.getElementsByTagName('a')[2];
+vision.textContent = 'Vision';
+let features = document.getElementsByTagName('a')[3];
+features.textContent = 'Features';
+let about = document.getElementsByTagName('a')[4];
+about.textContent = 'About';
+let contact = document.getElementsByTagName('a')[5];
+contact.textContent = 'Contact';
+
+
+//HEADER SECTION
+let headerText = document.getElementsByTagName('h1')[0];
+headerText.textContent = "DOM is Awesome!";
+
+// let btnText = document.getElementsByTagName('button');
+// btnText.setAttribute('src', siteContent['cta']['button']);
+let btnText = document.getElementsByTagName("button")[0];
+btnText.textContent = "Get started";
+
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+//BODY TOP
+
+
+const headerLogo = document.getElementById('cta-img');
+headerLogo.setAttribute('src', siteContent['cta']['img-src']);
+headerLogo.style.width = "300px";
+
+
+
+
+//BODY BOTTOM
+
+const bodyLogo = document.getElementById('middle-img');
+bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+
+//FOOTER
+
+
+
+
+
+
+
