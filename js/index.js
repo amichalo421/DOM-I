@@ -41,18 +41,7 @@ const siteContent = {
 
 //---------------------------//NAVIGATION//---------------------------
 //nav
-// let services = document.getElementsByTagName('a')[0];
-// services.textContent = 'Services';
-// let product = document.getElementsByTagName('a')[1];
-// product.textContent = 'Product';
-// let vision = document.getElementsByTagName('a')[2];
-// vision.textContent = 'Vision';
-// let features = document.getElementsByTagName('a')[3];
-// features.textContent = 'Features';
-// let about = document.getElementsByTagName('a')[4];
-// about.textContent = 'About';
-// let contact = document.getElementsByTagName('a')[5];
-// contact.textContent = 'Contact';
+
 const navigation = document.querySelectorAll('a');
 navigation[0].textContent = siteContent["nav"]["nav-item-1"];
 navigation[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -67,15 +56,14 @@ logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
 
 //---------------------------HEADER SECTION---------------------------
-// let headerText = document.getElementsByTagName('h1')[0];
-// headerText.textContent = "DOM is Awesome!";
-
-// let btnText = document.getElementsByTagName("button")[0];
-// btnText.textContent = "Get started";
 
 //titletext
 let ctaTexth1 = document.querySelector('.cta-text h1');
 ctaTexth1.textContent = siteContent["cta"]["h1"];
+  //titletextwrap
+  let ctaContainer = document.querySelector('.cta');
+  ctaContainer.style.flexWrap = "wrap";
+  ctaContainer.justifyContent = "center";
 //btn
 let ctaTextButton = document.querySelector('.cta-text button')
 ctaTextButton.textContent = siteContent["cta"]["button"];
@@ -85,21 +73,14 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 ctaImg.style.width = "300px";
 
 
+
 //---------------------------BODY TOP---------------------------
-// const featuresBody = document.getElementsByTagName('h4')[0];
-// featuresBody.textContent = "Features";
-// //
-// // const featuresText = document.getElementsByTagName('p')[0];
-// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
 
-// const aboutBody = document.getElementsByTagName('h4')[1];
-// aboutBody.textContent = "About";
-// //
-// // const featuresText = document.getElementsByTagName('p')[0];
-// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-
+//variables for h4 and p
 let h4elements = document.getElementsByTagName('h4');
 let pElements = document.getElementsByTagName('p');
+
+
 //features
 h4elements[0].textContent = siteContent["main-content"]["features-h4"];
 pElements[0].textContent = siteContent["main-content"]["features-content"];
@@ -112,25 +93,6 @@ pElements[1].textContent = siteContent["main-content"]["about-content"];
 
 const bodyLogo = document.getElementById('middle-img');
 bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-
-// const servicesBody = document.getElementsByTagName('h4')[2];
-// servicesBody.textContent = "Services";
-// //
-// // const featuresText = document.getElementsByTagName('p')[0];
-// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-// //
-// const productBody = document.getElementsByTagName('h4')[3];
-// productBody.textContent = "Product";
-// //
-// // const featuresText = document.getElementsByTagName('p')[0];
-// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-// //
-// const visionBody = document.getElementsByTagName('h4')[4];
-// visionBody.textContent = "Vision";
-// //
-// // const featuresText = document.getElementsByTagName('p')[0];
-// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
 
 //otherelements
 h4elements[2].textContent = siteContent["main-content"]["services-h4"];
@@ -145,10 +107,6 @@ pElements[4].textContent = siteContent["main-content"]["vision-content"];
 let contacth4 = document.querySelector('.contact h4');
 contacth4.textContent = siteContent["contact"]["contact-h4"];
 
-// const contactTitle = document.getElementsByClassName('.contact');
-// console.log(contactTitle);
-// contactTitle.textContent = siteContent();
-
 
 pElements[5].textContent = siteContent["contact"]["address"];
 pElements[6].textContent = siteContent["contact"]["phone"];
@@ -156,31 +114,13 @@ pElements[7].textContent = siteContent["contact"]["email"];
 pElements[8].textContent = siteContent["footer"]["copyright"];
 
 
-
-// const footerText = document.getElementsByTagName('footer, p')[0];
-// footerText.setAttribute('src', siteContent['footer']['copyright']);
-
-// const footerText = document.getElementsByTagName('footer, p');
-// footerText.textContent = siteContent['footer']['copyright'];
-
-  // //======Unecessary Footer Element ======//
-  // // 1- Create Element
-  // const newFooterTitle = document.createElement('h1');
-  // // 2- Add Content
-  // newFooterTitle.textContent = 'Footer';
-  // // 3- Select Target Parent Element
-  // const secondaryContent = document.querySelector('footer');
-  // // 4- Add Element To Parent
-  // secondaryContent.append(newFooterTitle);
-
-
 //------------TASK III------------------
 
 //nav color change
-// const nav = document.querySelector('header nav a')
-// nav.style.color = "green"
-const nav = document.querySelectorAll('a')
-nav.forEach(element => {
+// const navGreen = document.querySelector('header nav a')
+// navGreen.style.color = "green"
+const navGreen = document.querySelectorAll('a')
+navGreen.forEach(element => {
   element.style.color = "green";
 })
 
