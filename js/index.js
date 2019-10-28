@@ -114,23 +114,31 @@ const bodyLogo = document.getElementById('middle-img');
 bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
 
 
-const servicesBody = document.getElementsByTagName('h4')[2];
-servicesBody.textContent = "Services";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-//
-const productBody = document.getElementsByTagName('h4')[3];
-productBody.textContent = "Product";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-//
-const visionBody = document.getElementsByTagName('h4')[4];
-visionBody.textContent = "Vision";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+// const servicesBody = document.getElementsByTagName('h4')[2];
+// servicesBody.textContent = "Services";
+// //
+// // const featuresText = document.getElementsByTagName('p')[0];
+// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+// //
+// const productBody = document.getElementsByTagName('h4')[3];
+// productBody.textContent = "Product";
+// //
+// // const featuresText = document.getElementsByTagName('p')[0];
+// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+// //
+// const visionBody = document.getElementsByTagName('h4')[4];
+// visionBody.textContent = "Vision";
+// //
+// // const featuresText = document.getElementsByTagName('p')[0];
+// // featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+
+//otherelements
+h4elements[2].textContent = siteContent["main-content"]["services-h4"];
+pElements[2].textContent = siteContent["main-content"]["services-content"];
+h4elements[3].textContent = siteContent["main-content"]["product-h4"];
+pElements[3].textContent = siteContent["main-content"]["product-content"];
+h4elements[4].textContent = siteContent["main-content"]["vision-h4"];
+pElements[4].textContent = siteContent["main-content"]["vision-content"];
 
 
 //---------------------------FOOTER---------------------------
