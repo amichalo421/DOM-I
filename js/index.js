@@ -82,7 +82,7 @@ ctaTextButton.textContent = siteContent["cta"]["button"];
 //img
 let ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
-headerLogo.style.width = "300px";
+ctaImg.style.width = "300px";
 
 
 //---------------------------BODY TOP---------------------------
@@ -177,23 +177,29 @@ pElements[8].textContent = siteContent["footer"]["copyright"];
 //------------TASK III------------------
 
 //nav color change
-const nav = document.querySelector('header nav a')
-nav.style.color = "green"
+// const nav = document.querySelector('header nav a')
+// nav.style.color = "green"
+const nav = document.querySelectorAll('a')
+nav.forEach(element => {
+  element.style.color = "green";
+})
 
-// Select Parent
-const navElement = document.querySelector('nav');
-// Create element to add
-const newNavLink = document.createElement('a');
-newNavLink.appendChild(document.createTextNode('Sign In'))
-// Append the child to parent
-navElement.appendChild(newNavLink);
+//Append nav link:
+  // Select Parent
+  const navElement = document.querySelector('nav');
+  // Create element to add
+  const newNavLink = document.createElement('a');
+  newNavLink.appendChild(document.createTextNode('Sign In'))
+  // Append the child to parent
+  navElement.appendChild(newNavLink);
 
-const footerElement = document.querySelector('footer');
-const newFooter = document.createElement('a');
-newFooter.setAttribute('href', 'http://lambdaschool.com');
-newFooter.textContent = 'Taught By Lambda School';
+// Prepend footer:
+  const footerElement = document.querySelector('footer');
+  const newFooter = document.createElement('a');
+  newFooter.setAttribute('href', 'http://lambdaschool.com');
+  newFooter.textContent = 'Taught By Lambda School';
 
-footerElement.prepend(newFooter); 
+  footerElement.prepend(newFooter); 
 
 
 
