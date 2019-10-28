@@ -142,19 +142,23 @@ pElements[4].textContent = siteContent["main-content"]["vision-content"];
 
 
 //---------------------------FOOTER---------------------------
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent["contact"]["contact-h4"];
 
-
-
-const contactTitle = document.getElementsByClassName('.contact');
-console.log(contactTitle);
+// const contactTitle = document.getElementsByClassName('.contact');
+// console.log(contactTitle);
 // contactTitle.textContent = siteContent();
 
-//====== Footer Info ======//
+
+
+
+
+
 // const footerText = document.getElementsByTagName('footer, p')[0];
 // footerText.setAttribute('src', siteContent['footer']['copyright']);
 
-const footerText = document.getElementsByTagName('footer, p');
-footerText.textContent = siteContent['footer']['copyright'];
+// const footerText = document.getElementsByTagName('footer, p');
+// footerText.textContent = siteContent['footer']['copyright'];
 
   // //======Unecessary Footer Element ======//
   // // 1- Create Element
