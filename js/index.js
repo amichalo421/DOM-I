@@ -174,7 +174,26 @@ pElements[8].textContent = siteContent["footer"]["copyright"];
   // secondaryContent.append(newFooterTitle);
 
 
+//------------TASK III------------------
 
+//nav color change
+const nav = document.querySelector('header nav a')
+nav.style.color = "green"
+
+// Select Parent
+const navElement = document.querySelector('nav');
+// Create element to add
+const newNavLink = document.createElement('a');
+newNavLink.appendChild(document.createTextNode('Sign In'))
+// Append the child to parent
+navElement.appendChild(newNavLink);
+
+const footerElement = document.querySelector('footer');
+const newFooter = document.createElement('a');
+newFooter.setAttribute('href', 'http://lambdaschool.com');
+newFooter.textContent = 'Taught By Lambda School';
+
+footerElement.prepend(newFooter); 
 
 
 
