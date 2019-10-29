@@ -64,6 +64,9 @@ ctaTexth1.textContent = siteContent["cta"]["h1"];
   // let ctaContainer = document.querySelector('.cta');
   // ctaContainer.style.flexWrap = "wrap";
   // ctaContainer.justifyContent = "center";
+
+  //@ropeks - Hey Petar, would you help me with this flex or whatever properties it takes to manipulate this text?
+  
 //btn
 let ctaTextButton = document.querySelector('.cta-text button')
 ctaTextButton.textContent = siteContent["cta"]["button"];
@@ -141,7 +144,24 @@ navGreen.forEach(element => {
 
   footerElement.prepend(newFooter); 
 
+  
 
-
-
-
+  //Rodrigo Easter Egg
+  const button = document.querySelector("body").addEventListener('click', (event) => {
+    console.log(event);
+    const rand = Math.floor(Math.random() * 100);
+    // Easter Egg :)
+    if (rand === 42 || rand === 31) {
+      setInterval(() => {
+        document.body.style.backgroundColor = getRandomColor();
+      }, 100);
+    }
+  });
+  getRandomColor = () => {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
