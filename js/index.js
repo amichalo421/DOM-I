@@ -38,5 +38,130 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+//---------------------------//NAVIGATION//---------------------------
+//nav
+
+const navigation = document.querySelectorAll('a');
+navigation[0].textContent = siteContent["nav"]["nav-item-1"];
+navigation[1].textContent = siteContent["nav"]["nav-item-2"];
+navigation[2].textContent = siteContent["nav"]["nav-item-3"];
+navigation[3].textContent = siteContent["nav"]["nav-item-4"];
+navigation[4].textContent = siteContent["nav"]["nav-item-5"];
+navigation[5].textContent = siteContent["nav"]["nav-item-6"];
+
+//logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
+
+
+//---------------------------HEADER SECTION---------------------------
+
+//titletext
+let ctaTexth1 = document.querySelector('.cta-text h1');
+ctaTexth1.textContent = siteContent["cta"]["h1"];
+  //titletextwrap
+  // let ctaContainer = document.querySelector('.cta');
+  // ctaContainer.style.flexWrap = "wrap";
+  // ctaContainer.justifyContent = "center";
+
+  //@ropeks - Hey Petar, would you help me with this flex or whatever properties it takes to manipulate this text?
+  
+//btn
+let ctaTextButton = document.querySelector('.cta-text button')
+ctaTextButton.textContent = siteContent["cta"]["button"];
+//img
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+ctaImg.style.width = "300px";
+
+
+
+//---------------------------BODY TOP---------------------------
+
+//variables for h4 and p
+let h4elements = document.getElementsByTagName('h4');
+let pElements = document.getElementsByTagName('p');
+
+
+//features
+h4elements[0].textContent = siteContent["main-content"]["features-h4"];
+pElements[0].textContent = siteContent["main-content"]["features-content"];
+//about
+h4elements[1].textContent = siteContent["main-content"]["about-h4"];
+pElements[1].textContent = siteContent["main-content"]["about-content"];
+
+
+//---------------------------BODY BOTTOM---------------------------
+
+const bodyLogo = document.getElementById('middle-img');
+bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+//otherelements
+h4elements[2].textContent = siteContent["main-content"]["services-h4"];
+pElements[2].textContent = siteContent["main-content"]["services-content"];
+h4elements[3].textContent = siteContent["main-content"]["product-h4"];
+pElements[3].textContent = siteContent["main-content"]["product-content"];
+h4elements[4].textContent = siteContent["main-content"]["vision-h4"];
+pElements[4].textContent = siteContent["main-content"]["vision-content"];
+
+
+//---------------------------FOOTER---------------------------
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+
+
+pElements[5].textContent = siteContent["contact"]["address"];
+pElements[6].textContent = siteContent["contact"]["phone"];
+pElements[7].textContent = siteContent["contact"]["email"];
+pElements[8].textContent = siteContent["footer"]["copyright"];
+
+
+//------------TASK III------------------
+
+//nav color change
+// const navGreen = document.querySelector('header nav a')
+// navGreen.style.color = "green"
+const navGreen = document.querySelectorAll('a')
+navGreen.forEach(element => {
+  element.style.color = "green";
+})
+
+//Append nav link:
+  // Select Parent
+  const navElement = document.querySelector('nav');
+  // Create element to add
+  const newNavLink = document.createElement('a');
+  newNavLink.appendChild(document.createTextNode('Sign In'))
+  // Append the child to parent
+  navElement.appendChild(newNavLink);
+
+// Prepend footer:
+  const footerElement = document.querySelector('footer');
+  const newFooter = document.createElement('a');
+  newFooter.setAttribute('href', 'http://lambdaschool.com');
+  newFooter.textContent = 'Taught By Lambda School';
+
+  footerElement.prepend(newFooter); 
+
+  
+
+  //Rodrigo Easter Egg
+  const button = document.querySelector("body").addEventListener('click', (event) => {
+    console.log(event);
+    const rand = Math.floor(Math.random() * 100);
+    // Easter Egg :)
+    if (rand === 42 || rand === 31) {
+      setInterval(() => {
+        document.body.style.backgroundColor = getRandomColor();
+      }, 100);
+    }
+  });
+  getRandomColor = () => {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
