@@ -130,19 +130,11 @@ pElements[4].textContent = siteContent["main-content"]["vision-content"];
 
 //FOOTER
 
-// const footerText = document.getElementsByTagName('footer, p')[0];
-// footerText.setAttribute('src', siteContent['footer']['copyright']);
+let contacth4 = document.querySelector('.contact h4');
+contacth4.textContent = siteContent["contact"]["contact-h4"];
 
-const footerText = document.getElementsByTagName('footer, p');
-footerText.textContent = siteContent['footer']['copyright'];
+// const contactTitle = document.getElementsByClassName('.contact');
+// console.log(contactTitle);
+// contactTitle.textContent = siteContent();
 
-  // //======Unecessary Footer Element ======//
-  // // 1- Create Element
-  // const newFooterTitle = document.createElement('h1');
-  // // 2- Add Content
-  // newFooterTitle.textContent = 'Footer';
-  // // 3- Select Target Parent Element
-  // const secondaryContent = document.querySelector('footer');
-  // // 4- Add Element To Parent
-  // secondaryContent.append(newFooterTitle);
 
