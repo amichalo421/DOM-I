@@ -37,10 +37,11 @@ const siteContent = {
   },
 };
 
-//--------------------------------------------------------------//
+// Example: Update the img src for the logo
 
-//NAVIGATION//
+//---------------------------//NAVIGATION//---------------------------
 //nav
+
 const navigation = document.querySelectorAll('a');
 navigation[0].textContent = siteContent["nav"]["nav-item-1"];
 navigation[1].textContent = siteContent["nav"]["nav-item-2"];
@@ -51,32 +52,32 @@ navigation[5].textContent = siteContent["nav"]["nav-item-6"];
 
 //logo
 let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
+logo.setAttribute('src', siteContent["nav"]["img-src"]);
 
-//--------------------------------------------------------------//
 
-//HEADER SECTION
-let headerText = document.getElementsByTagName('h1')[0];
-headerText.textContent = "DOM is Awesome!";
-
-// let btnText = document.getElementsByTagName('button');
-// btnText.setAttribute('src', siteContent['cta']['button']);
-let btnText = document.getElementsByTagName("button")[0];
-btnText.textContent = "Get started";
+//---------------------------HEADER SECTION---------------------------
 
 //titletext
 let ctaTexth1 = document.querySelector('.cta-text h1');
-
 ctaTexth1.textContent = siteContent["cta"]["h1"];
+  //titletextwrap
+  // let ctaContainer = document.querySelector('.cta');
+  // ctaContainer.style.flexWrap = "wrap";
+  // ctaContainer.justifyContent = "center";
+
+  //@ropeks - Hey Petar, would you help me with this flex or whatever properties it takes to manipulate this text?
+  
 //btn
 let ctaTextButton = document.querySelector('.cta-text button')
 ctaTextButton.textContent = siteContent["cta"]["button"];
 //img
 let ctaImg = document.querySelector('#cta-img')
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
-headerLogo.style.width = "300px";
+ctaImg.style.width = "300px";
 
-//--------------------------------------------------------------//
+
+
+//---------------------------BODY TOP---------------------------
 
 //variables for h4 and p
 let h4elements = document.getElementsByTagName('h4');
@@ -90,29 +91,8 @@ pElements[0].textContent = siteContent["main-content"]["features-content"];
 h4elements[1].textContent = siteContent["main-content"]["about-h4"];
 pElements[1].textContent = siteContent["main-content"]["about-content"];
 
-//--------------------------------------------------------------//
 
-//BODY BOTTOM
-// const bodyLogo = document.getElementById('middle-img');
-// bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
-
-// const servicesBody = document.getElementsByTagName('h4')[2];
-// servicesBody.textContent = "Services";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-//
-// const productBody = document.getElementsByTagName('h4')[3];
-// productBody.textContent = "Product";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
-//
-// const visionBody = document.getElementsByTagName('h4')[4];
-// visionBody.textContent = "Vision";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+//---------------------------BODY BOTTOM---------------------------
 
 const bodyLogo = document.getElementById('middle-img');
 bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
@@ -126,22 +106,15 @@ h4elements[4].textContent = siteContent["main-content"]["vision-h4"];
 pElements[4].textContent = siteContent["main-content"]["vision-content"];
 
 
-//--------------------------------------------------------------//
-
-//FOOTER
-
+//---------------------------FOOTER---------------------------
 let contacth4 = document.querySelector('.contact h4');
 contacth4.textContent = siteContent["contact"]["contact-h4"];
 
-// const contactTitle = document.getElementsByClassName('.contact');
-// console.log(contactTitle);
-// contactTitle.textContent = siteContent();
 
 pElements[5].textContent = siteContent["contact"]["address"];
 pElements[6].textContent = siteContent["contact"]["phone"];
 pElements[7].textContent = siteContent["contact"]["email"];
 pElements[8].textContent = siteContent["footer"]["copyright"];
-
 
 
 //------------TASK III------------------
@@ -170,3 +143,6 @@ navGreen.forEach(element => {
   newFooter.textContent = 'Taught By Lambda School';
 
   footerElement.prepend(newFooter); 
+
+  
+
