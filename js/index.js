@@ -40,21 +40,16 @@ const siteContent = {
 //--------------------------------------------------------------//
 
 //NAVIGATION//
-let services = document.getElementsByTagName('a')[0];
-services.textContent = 'Services';
-let product = document.getElementsByTagName('a')[1];
-product.textContent = 'Product';
-let vision = document.getElementsByTagName('a')[2];
-vision.textContent = 'Vision';
-let features = document.getElementsByTagName('a')[3];
-features.textContent = 'Features';
-let about = document.getElementsByTagName('a')[4];
-about.textContent = 'About';
-let contact = document.getElementsByTagName('a')[5];
-contact.textContent = 'Contact';
+//nav
+const navigation = document.querySelectorAll('a');
+navigation[0].textContent = siteContent["nav"]["nav-item-1"];
+navigation[1].textContent = siteContent["nav"]["nav-item-2"];
+navigation[2].textContent = siteContent["nav"]["nav-item-3"];
+navigation[3].textContent = siteContent["nav"]["nav-item-4"];
+navigation[4].textContent = siteContent["nav"]["nav-item-5"];
+navigation[5].textContent = siteContent["nav"]["nav-item-6"];
 
-
-// Example: Update the img src for the logo
+//logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -69,25 +64,31 @@ headerText.textContent = "DOM is Awesome!";
 let btnText = document.getElementsByTagName("button")[0];
 btnText.textContent = "Get started";
 
+//titletext
+let ctaTexth1 = document.querySelector('.cta-text h1');
+
+ctaTexth1.textContent = siteContent["cta"]["h1"];
+//btn
+let ctaTextButton = document.querySelector('.cta-text button')
+ctaTextButton.textContent = siteContent["cta"]["button"];
+//img
+let ctaImg = document.querySelector('#cta-img')
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+headerLogo.style.width = "300px";
 
 //--------------------------------------------------------------//
 
-//BODY TOP
-const featuresBody = document.getElementsByTagName('h4')[0];
-featuresBody.textContent = "Features";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+//variables for h4 and p
+let h4elements = document.getElementsByTagName('h4');
+let pElements = document.getElementsByTagName('p');
 
-const aboutBody = document.getElementsByTagName('h4')[1];
-aboutBody.textContent = "About";
-//
-// const featuresText = document.getElementsByTagName('p')[0];
-// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
 
-// headerLogo.setAttribute('src', siteContent['cta']['img-src']);
-// headerLogo.setAttribute('src', siteContent['cta']['img-src']);
-// headerLogo.style.width = "300px";
+//features
+h4elements[0].textContent = siteContent["main-content"]["features-h4"];
+pElements[0].textContent = siteContent["main-content"]["features-content"];
+//about
+h4elements[1].textContent = siteContent["main-content"]["about-h4"];
+pElements[1].textContent = siteContent["main-content"]["about-content"];
 
 //--------------------------------------------------------------//
 
@@ -117,19 +118,19 @@ visionBody.textContent = "Vision";
 
 //FOOTER
 
-// //====== Creating New HTML Elements ======//
-// // 1- Create Element
-// const newFooterTitle = document.createElement('h1');
-// // 2- Add Content
-// newFooterTitle.textContent = 'Footer';
-// // 3- Select Target Parent Element
-// const secondaryContent = document.querySelector('footer');
-// // 4- Add Element To Parent
-// secondaryContent.append(newFooterTitle);
+// const footerText = document.getElementsByTagName('footer, p')[0];
+// footerText.setAttribute('src', siteContent['footer']['copyright']);
 
-// const footerTitle = document.getElementsByClassName('.contact')[0];
-// footerTitle.textContent = 'Contact';
+const footerText = document.getElementsByTagName('footer, p');
+footerText.textContent = siteContent['footer']['copyright'];
 
-// //====== Footer Info ======//
-// const footerText = document.getElementsByTagName('p')
+  // //======Unecessary Footer Element ======//
+  // // 1- Create Element
+  // const newFooterTitle = document.createElement('h1');
+  // // 2- Add Content
+  // newFooterTitle.textContent = 'Footer';
+  // // 3- Select Target Parent Element
+  // const secondaryContent = document.querySelector('footer');
+  // // 4- Add Element To Parent
+  // secondaryContent.append(newFooterTitle);
 
