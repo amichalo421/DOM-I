@@ -145,4 +145,22 @@ navGreen.forEach(element => {
   footerElement.prepend(newFooter); 
 
   
-
+  //Easter Egg
+  const button = document.querySelector("body").addEventListener('click', (event) => {
+    console.log(event);
+    const rand = Math.floor(Math.random() * 100);
+    // Easter Egg :)
+    if (rand === 42 || rand === 31) {
+      setInterval(() => {
+        document.body.style.backgroundColor = getRandomColor();
+      }, 100);
+    }
+  });
+  getRandomColor = () => {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
