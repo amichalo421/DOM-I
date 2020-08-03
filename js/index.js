@@ -37,10 +37,7 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
-let logo = document.getElementById("logo-img");
-logo.setAttribute('src', siteContent["nav"]["img-src"])
-
+//--------------------------------------------------------------//
 
 //NAVIGATION//
 let services = document.getElementsByTagName('a')[0];
@@ -57,6 +54,12 @@ let contact = document.getElementsByTagName('a')[5];
 contact.textContent = 'Contact';
 
 
+// Example: Update the img src for the logo
+let logo = document.getElementById("logo-img");
+logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//--------------------------------------------------------------//
+
 //HEADER SECTION
 let headerText = document.getElementsByTagName('h1')[0];
 headerText.textContent = "DOM is Awesome!";
@@ -65,3 +68,68 @@ headerText.textContent = "DOM is Awesome!";
 // btnText.setAttribute('src', siteContent['cta']['button']);
 let btnText = document.getElementsByTagName("button")[0];
 btnText.textContent = "Get started";
+
+
+//--------------------------------------------------------------//
+
+//BODY TOP
+const featuresBody = document.getElementsByTagName('h4')[0];
+featuresBody.textContent = "Features";
+//
+// const featuresText = document.getElementsByTagName('p')[0];
+// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+
+const aboutBody = document.getElementsByTagName('h4')[1];
+aboutBody.textContent = "About";
+//
+// const featuresText = document.getElementsByTagName('p')[0];
+// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+
+// headerLogo.setAttribute('src', siteContent['cta']['img-src']);
+// headerLogo.setAttribute('src', siteContent['cta']['img-src']);
+// headerLogo.style.width = "300px";
+
+//--------------------------------------------------------------//
+
+//BODY BOTTOM
+const bodyLogo = document.getElementById('middle-img');
+bodyLogo.setAttribute('src', siteContent['main-content']['middle-img-src']);
+
+const servicesBody = document.getElementsByTagName('h4')[2];
+servicesBody.textContent = "Services";
+//
+// const featuresText = document.getElementsByTagName('p')[0];
+// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+//
+const productBody = document.getElementsByTagName('h4')[3];
+productBody.textContent = "Product";
+//
+// const featuresText = document.getElementsByTagName('p')[0];
+// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+//
+const visionBody = document.getElementsByTagName('h4')[4];
+visionBody.textContent = "Vision";
+//
+// const featuresText = document.getElementsByTagName('p')[0];
+// featuresText.setAttribute('src', siteContent['main-content']['features-content']);
+
+//--------------------------------------------------------------//
+
+//FOOTER
+
+// //====== Creating New HTML Elements ======//
+// // 1- Create Element
+// const newFooterTitle = document.createElement('h1');
+// // 2- Add Content
+// newFooterTitle.textContent = 'Footer';
+// // 3- Select Target Parent Element
+// const secondaryContent = document.querySelector('footer');
+// // 4- Add Element To Parent
+// secondaryContent.append(newFooterTitle);
+
+// const footerTitle = document.getElementsByClassName('.contact')[0];
+// footerTitle.textContent = 'Contact';
+
+// //====== Footer Info ======//
+// const footerText = document.getElementsByTagName('p')
+
