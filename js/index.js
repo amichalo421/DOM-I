@@ -137,4 +137,9 @@ contacth4.textContent = siteContent["contact"]["contact-h4"];
 // console.log(contactTitle);
 // contactTitle.textContent = siteContent();
 
+pElements[5].textContent = siteContent["contact"]["address"];
+pElements[6].textContent = siteContent["contact"]["phone"];
+pElements[7].textContent = siteContent["contact"]["email"];
+pElements[8].textContent = siteContent["footer"]["copyright"];
+
 
